@@ -28,7 +28,7 @@ public class Main extends ActionBarActivity {
 
         clickSound = MediaPlayer.create(Main.this, R.raw.click);
         score = (TextView) findViewById(R.id.scoreText);
-        image = (ImageButton) findViewById(R.id.ImageButton);
+        image = (ImageButton) findViewById(R.id.imageButton);
 
 
         backgroundMusic.start();
@@ -85,14 +85,13 @@ public class Main extends ActionBarActivity {
     public void checksetNum(View view)
     {
         if (click == setNum) {
+
+            changeImage(setNum);
+
             click = 0;
             setNum = setNum + 5;
-
-
             String temp = click + " / " + setNum;
             score.setText(temp);
-            changeImage(view,setNum);
-
 
         } else {
 
@@ -100,90 +99,30 @@ public class Main extends ActionBarActivity {
             score.setText(temp);
         }
     }
-    public void changeImage(View view, int setNum)
+    public void changeImage(int setNum)
     {
         switch (setNum) {
-            case 10: {
+            case 10:
+            {
                 image.setImageResource(R.drawable.two);
                 break;
             }
-            case 15: {
+            case 15:
+            {
                 image.setImageResource(R.drawable.three);
                 break;
             }
-            case 20: {
+            case 20:
+            {
                 image.setImageResource(R.drawable.four);
                 break;
             }
-            case 25: {
+            case 25:
+            {
                 image.setImageResource(R.drawable.five);
                 break;
             }
-            case 30: {
-                image.setImageResource(R.drawable.six);
-                break;
-            }
-            case 35: {
-                image.setImageResource(R.drawable.seven);
-                break;
-            }
-            case 40: {
-                image.setImageResource(R.drawable.eight);
-                break;
-            }
-            case 45: {
-                image.setImageResource(R.drawable.nine);
-                break;
-            }
-            case 50: {
-                image.setImageResource(R.drawable.ten);
-                break;
-            }
-            case 55: {
-                image.setImageResource(R.drawable.eleven);
-                break;
-            }
-            case 60: {
-                image.setImageResource(R.drawable.twelve);
-                break;
-            }
-            case 65: {
-                image.setImageResource(R.drawable.thirteen);
-                break;
-            }
-            case 70: {
-                image.setImageResource(R.drawable.fourteen);
-                break;
-            }
-            case 75: {
-                image.setImageResource(R.drawable.fifteen);
-                break;
-            }
-            case 80: {
-                image.setImageResource(R.drawable.sixteen);
-                break;
-            }
-            case 85: {
-                image.setImageResource(R.drawable.seventeen);
-                break;
-            }
-            case 90: {
-                image.setImageResource(R.drawable.eighteen);
-                break;
-            }
-            case 95: {
-                image.setImageResource(R.drawable.nineteen);
-                break;
-            }
 
-            case 100: {
-                image.setImageResource(R.drawable.twenty);
-                break;
-            }
-            case 105: {
-                image.setImageResource(R.drawable.twentyone);
-                break;
-            }
             default: {
                 break;
             }
